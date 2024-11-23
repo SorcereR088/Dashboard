@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 import Layout from "./scenes/layout";
 import Dashboard from "./scenes/dashboard";
+import Property from "./scenes/property"
 
 const App = () => {
   const mode = useSelector((state) => state.global.mode);
@@ -21,6 +22,7 @@ const App = () => {
             <Route element={<Layout />}> {/* Parent route */}
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
               <Route path="/dashboard" element={<Dashboard />} /> {/* Nested routes */}
+              <Route path="/property" element={<Property />} />
             </Route>
           </Routes>
         </ThemeProvider>

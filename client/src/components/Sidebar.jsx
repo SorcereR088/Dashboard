@@ -44,7 +44,7 @@ const navItems = [
         icon: null,
     },
     {
-        text: "Properties",
+        text: "Property",
         icon: <ShoppingCartOutlined />
     },
     {

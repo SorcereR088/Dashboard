@@ -4,15 +4,13 @@ import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
-import { useGetUserQuery } from '../../state/api';  // Use import instead of require
+import { useGetUserQuery } from '../../state/api';
 
 const Layout = () => {
   const isNonMobile = useMediaQuery("(min-width: 600px");
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const user_id = useSelector((state) => state.global.user_id);
   const { data } = useGetUserQuery(user_id);
-  console.log('Redux user_id:', user_id);
-  console.log('Fetched user data:', data);
   
   return (
     <Box display={isNonMobile ? "flex" : "block"} width="100%" height="100%">
