@@ -12,13 +12,14 @@ import {
   Button,
   Stack,
 } from '@mui/material';
-import { useGetPropertyQuery } from '../../state/api';
+import { useGetPropertyQuery, useGetUsersQuery } from '../../state/api';
 import Header from '../../components/Header';
 
 const Property = () => {
   const { data, isLoading } = useGetPropertyQuery();
   const theme = useTheme();
   const isNonMobile = useMediaQuery('(min-width: 1000px)');
+  
 
   const getImagePath = (imageName) =>
     `/src/assets/images/Properties/${imageName}`; // Adjust based on your setup

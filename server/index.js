@@ -9,6 +9,7 @@ const propertiesRoutes = require('./routes/properties');
 const usersRoutes = require('./routes/users');
 const managementRoutes = require('./routes/management');
 const salesRoutes = require('./routes/sales');
+const transactionsRoutes = require('./routes/transactions');
 
 
 //Configurations
@@ -27,5 +28,7 @@ app.use("/property", propertiesRoutes);
 app.use("/user", usersRoutes);
 app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
+app.use("/sales", salesRoutes);
+app.use("/transactions", transactionsRoutes)
 
 app.listen(3000, console.log("server started"))

@@ -8,6 +8,8 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Layout from "./scenes/layout";
 import Dashboard from "./scenes/dashboard";
 import Property from "./scenes/property"
+import Users from "./scenes/users";
+import Transactions from "./scenes//transactions";
 
 const App = () => {
   const mode = useSelector((state) => state.global.mode);
@@ -23,6 +25,8 @@ const App = () => {
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
               <Route path="/dashboard" element={<Dashboard />} /> {/* Nested routes */}
               <Route path="/property" element={<Property />} />
+              <Route path="/users" element={<Users />} />
+              <Route path="/transactions" element={<Transactions />} />
             </Route>
           </Routes>
         </ThemeProvider>

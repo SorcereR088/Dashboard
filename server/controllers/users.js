@@ -3,7 +3,7 @@ const pool = require('../db')
 
 module.exports.allUsers = async (req, res) => {
     try {
-        const allUsers = await pool.query('SELECT * FROM user_details');
+        const allUsers = await pool.query('SELECT user_id, user_name, user_email FROM user_details');
         res.json(allUsers.rows)
 
     } catch (error) {
@@ -14,7 +14,7 @@ module.exports.allUsers = async (req, res) => {
 module.exports.user = async (req, res) => {
     try {
         const {id} = req.params;
-        const user = await pool.query('SELECT * FROM user_details WHERE user_id = $1', [id])
+        const user = await pool.query('SELECT user_id, user_name, user_email FROM user_details WHERE user_id = $1', [id]);
         res.json(user.rows)
 
     } catch (error) {

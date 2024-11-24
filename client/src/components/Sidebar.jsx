@@ -48,7 +48,7 @@ const navItems = [
         icon: <ShoppingCartOutlined />
     },
     {
-        text: "Customers",
+        text: "Users",
         icon: <Groups2Outlined/>
     },
     {
