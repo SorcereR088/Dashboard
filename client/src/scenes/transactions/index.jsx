@@ -42,7 +42,7 @@ const Transactions = () => {
   return (
     <Box m="1.5rem 2.5rem">
       <Header title="Transactions" subtitle="List of all transactions" />
-      <div style={{ height: 600, width: '100%' }}>
+      <div style={{ height: 600, width: '100%' }}>k
         <DataGrid
           rows={data || []} // Ensure the data is passed correctly, empty array if no data
           columns={columns}
